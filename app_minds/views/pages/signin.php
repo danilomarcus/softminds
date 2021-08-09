@@ -57,7 +57,7 @@
 
         <div class="checkbox mb-3">
             <label>
-                <input type="checkbox" value="remember-me"> Lembrar
+                <a href="<?= base_url() ?>users/new" class="btn btn-sm btn-info">Cadastra usuário para testes</a>
             </label>
         </div>
         <button class="w-100 btn btn-lg btn-primary" type="submit">Acessar</button>

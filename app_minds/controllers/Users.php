@@ -3,6 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Users extends CI_Controller
 {
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     /**
      *  carrega o template de login
      */
@@ -82,6 +88,8 @@ class Users extends CI_Controller
                 return;
             }
 
+            $pass1test = $post['password'];
+            $pass2test = $post['password2'];
             // checa tamanho da senha
             if(!is_passwd($post['password'])){
                 $json['message'] = createMessage("warning", "Por favor, as senhas devem ter entre 8 e 40 caracteres");
@@ -93,7 +101,7 @@ class Users extends CI_Controller
             }
 
             // trata a senha
-            if ($post['password'] != $post['password2']) {
+            if ($pass1test != $pass2test) {
                 $json['message'] = createMessage("warning", "Por favor, as senhas devem coincidir");
                 echo json_encode($json);
                 return;
@@ -182,6 +190,9 @@ class Users extends CI_Controller
      * funcao para buscar
      */
     function search(){
+        // checa se o usuario esta logado
+        is_logged();
+
         // carrega o model
         $this->load->model("users_model");
 

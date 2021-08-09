@@ -97,12 +97,6 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="bar-chart-2"></span>
-                            Relatórios (em breve)
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="<?= base_url() ?>signin/signout">
                             <span data-feather="exit"></span>
                             Sair

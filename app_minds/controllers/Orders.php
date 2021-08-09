@@ -3,6 +3,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Orders extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+
+        // checa se o usuario esta logado
+        is_logged();
+    }
+
     /**
      *  carrega o template de login
      */
