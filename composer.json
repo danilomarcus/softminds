@@ -1,0 +1,28 @@
+{
+	"description": "Soft Minds challenge",
+	"name": "Soft Minds",
+	"type": "project",
+	"homepage": "https://softminds.com.br",
+	"license": "proprietary",
+	"require": {
+		"php": ">=7.3"
+	},
+	"autoload": {
+		"psr-4":{
+			"Source\\": "source/"
+		},
+		"files": [
+			"source/Boot/Config.php",
+			"source/Boot/Helpers.php",
+			"source/Boot/Minify/DeskClient.php",
+			"source/Boot/Minify/DeskAdmin.php"
+		]
+	},
+	"suggest": {
+		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
+	},
+	"require-dev": {
+		"mikey179/vfsstream": "1.1.*",
+		"phpunit/phpunit": "4.* || 5.*"
+	}
+}
