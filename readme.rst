@@ -12,7 +12,9 @@ Portal de Vendas de Produtos
 
 
 WebService para obter as vendas concluídas
+
 Parâmetros de pedido via GET:
+
 [
     date_begin: "Y-m-d",
     date_end: "Y-m-d",
