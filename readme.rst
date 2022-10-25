@@ -21,4 +21,4 @@ Parâmetros de pedido via GET:
 ]
 
 URL de teste de WS:
-http://<localhost ou IP>/software_manyminds/api/softapi/orders
+http://<localhost ou IP>/project_folder/api/softapi/orders
